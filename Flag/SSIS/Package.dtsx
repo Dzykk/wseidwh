@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="4/6/2019 11:40:13 AM"
+  DTS:CreationDate="4/6/2019 12:15:01 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="PK2-10"
   DTS:CreatorName="WSEI\jakub.juszczak"
-  DTS:DTSID="{18192B22-63F8-404A-A125-BEA1ADEE7654}"
+  DTS:DTSID="{3051E3F6-AEE7-405B-9BCB-73315E3984AC}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.0900.40"
   DTS:LocaleID="1045"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="7"
-  DTS:VersionGUID="{A6C18FC9-2339-4648-8232-EDB1EB82D99A}">
+  DTS:VersionBuild="2"
+  DTS:VersionGUID="{713EFF55-A826-40F9-8E44-B4298F0CC08E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[CSVCon]"
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
       DTS:CreationName="FLATFILE"
-      DTS:DTSID="{027C7430-2DDC-4608-85DC-81B57F27ED56}"
-      DTS:ObjectName="CSVCon">
+      DTS:DTSID="{278DEE86-34AB-4953-A674-603DB5490811}"
+      DTS:ObjectName="Flat File Connection Manager">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -29,107 +29,83 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="D:\abalone.csv">
+          DTS:ConnectionString="D:\car.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="1"
+              DTS:MaximumWidth="10"
               DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Sex"
-              DTS:DTSID="{1BEC2D60-FED6-4A10-A1E7-AFD7820C32C1}"
+              DTS:ObjectName="buying"
+              DTS:DTSID="{ED9E0A02-E2C2-40C3-810D-30B98F6EFAB9}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Length"
-              DTS:DTSID="{03CBE55C-A6D3-4A44-AD3C-D5DF9D3E0359}"
+              DTS:ObjectName="maint"
+              DTS:DTSID="{49FE1BE3-34A2-4870-827B-C2FEC41B8B6A}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Diameter"
-              DTS:DTSID="{41EA867D-4C31-43B0-8742-F10DB091B3A2}"
+              DTS:ObjectName="doors"
+              DTS:DTSID="{D42352D8-081F-40B5-A54E-84F573B7CE5D}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
+              DTS:MaximumWidth="15"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Height"
-              DTS:DTSID="{06FED458-22CC-424F-8D7D-DBA5B4C950E2}"
+              DTS:ObjectName="persons"
+              DTS:DTSID="{4E8CD8BC-75CD-4212-8A06-AAA92D3BAF35}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="WholeWeight"
-              DTS:DTSID="{3329C0D4-A8CA-45A8-8349-D99610B67234}"
+              DTS:ObjectName="lug_boot"
+              DTS:DTSID="{F1B3FE11-5198-439E-B475-65406A56A6EC}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="ShuckedWeight"
-              DTS:DTSID="{00EE8732-532B-42A9-A443-0C7E0BAA6A4A}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="VisceraWeight"
-              DTS:DTSID="{E736924A-56B6-48DF-9E55-947866B98749}"
-              DTS:CreationName="" />
-            <DTS:FlatFileColumn
-              DTS:ColumnType="Delimited"
-              DTS:ColumnDelimiter="_x002C_"
-              DTS:DataType="131"
-              DTS:DataPrecision="4"
-              DTS:DataScale="3"
-              DTS:TextQualified="True"
-              DTS:ObjectName="ShellWeight"
-              DTS:DTSID="{1052838C-0502-4CB4-9859-56DD328DC259}"
+              DTS:ObjectName="safety"
+              DTS:DTSID="{E23FC3EE-5B24-4C25-A439-165BC8736E5F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x000A_"
-              DTS:DataType="3"
+              DTS:MaximumWidth="10"
+              DTS:DataType="129"
               DTS:TextQualified="True"
-              DTS:ObjectName="Rings"
-              DTS:DTSID="{0B4C08AE-F325-4AB1-9069-6FD8A407CD7E}"
+              DTS:ObjectName="class"
+              DTS:DTSID="{3A4CD765-BF10-447A-A41F-7514159A42B2}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[DBCon]"
+      DTS:refId="Package.ConnectionManagers[LocalHost.Auto]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{86C2019E-47F6-4E71-BD93-A53D4DE7CF34}"
-      DTS:ObjectName="DBCon">
+      DTS:DTSID="{0F31CD93-0BBA-420F-B5C5-59BA57EB0FA3}"
+      DTS:ObjectName="LocalHost.Auto">
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Abalone;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=.;Initial Catalog=Auto;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -139,7 +115,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{C2E7B61D-E54E-4A14-83D7-A3DEE5F8E4C7}"
+      DTS:DTSID="{146DE056-82DA-4D96-AE9A-6D8AE3483C65}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -162,7 +138,7 @@
                 <property
                   dataType="System.Boolean"
                   description="Specifies whether zero-length columns are treated as null."
-                  name="RetainNulls">true</property>
+                  name="RetainNulls">false</property>
                 <property
                   dataType="System.String"
                   description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
@@ -171,8 +147,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[CSVCon]"
-                  connectionManagerRefId="Package.ConnectionManagers[CSVCon]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
@@ -181,15 +157,15 @@
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex]"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex]"
-                      length="1"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex]"
-                      name="Sex"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[buying]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]"
+                      name="buying"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -203,15 +179,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Length]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Length]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Length]"
-                      name="Length"
-                      precision="4"
-                      scale="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[maint]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]"
+                      name="maint"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -225,15 +201,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Diameter]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Diameter]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Diameter]"
-                      name="Diameter"
-                      precision="4"
-                      scale="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[doors]"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]"
+                      name="doors"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -247,15 +223,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Height]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Height]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Height]"
-                      name="Height"
-                      precision="4"
-                      scale="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[persons]"
+                      length="15"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]"
+                      name="persons"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -269,15 +245,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WholeWeight]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WholeWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WholeWeight]"
-                      name="WholeWeight"
-                      precision="4"
-                      scale="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]"
+                      name="lug_boot"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -291,15 +267,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShuckedWeight]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ShuckedWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShuckedWeight]"
-                      name="ShuckedWeight"
-                      precision="4"
-                      scale="3"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[safety]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]"
+                      name="safety"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -313,57 +289,15 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[VisceraWeight]"
-                      dataType="numeric"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]"
+                      codePage="1250"
+                      dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VisceraWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[VisceraWeight]"
-                      name="VisceraWeight"
-                      precision="4"
-                      scale="3"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShellWeight]"
-                      dataType="numeric"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ShellWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShellWeight]"
-                      name="ShellWeight"
-                      precision="4"
-                      scale="3"
-                      truncationRowDisposition="FailComponent">
-                      <properties>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
-                          name="FastParse">false</property>
-                        <property
-                          dataType="System.Boolean"
-                          description="Indicates whether the data is in binary format."
-                          name="UseBinaryFormat">false</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rings]"
-                      dataType="i4"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rings]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rings]"
-                      name="Rings"
+                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[class]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]"
+                      name="class"
                       truncationRowDisposition="FailComponent">
                       <properties>
                         <property
@@ -380,57 +314,47 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sex]"
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[buying]"
                       codePage="1250"
                       dataType="str"
-                      length="1"
-                      name="Sex" />
+                      length="10"
+                      name="buying" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Length]"
-                      dataType="numeric"
-                      name="Length"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[maint]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="maint" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Diameter]"
-                      dataType="numeric"
-                      name="Diameter"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[doors]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="doors" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Height]"
-                      dataType="numeric"
-                      name="Height"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[persons]"
+                      codePage="1250"
+                      dataType="str"
+                      length="15"
+                      name="persons" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[WholeWeight]"
-                      dataType="numeric"
-                      name="WholeWeight"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="lug_boot" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ShuckedWeight]"
-                      dataType="numeric"
-                      name="ShuckedWeight"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[safety]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="safety" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[VisceraWeight]"
-                      dataType="numeric"
-                      name="VisceraWeight"
-                      precision="4"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ShellWeight]"
-                      dataType="numeric"
-                      name="ShellWeight"
-                      precision="4"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rings]"
-                      dataType="i4"
-                      name="Rings" />
+                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[class]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="class" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -521,8 +445,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DBCon]"
-                  connectionManagerRefId="Package.ConnectionManagers[DBCon]"
+                  connectionManagerID="Package.ConnectionManagers[LocalHost.Auto]"
+                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Auto]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -535,130 +459,106 @@
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Sex]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[buying]"
                       cachedCodepage="1250"
                       cachedDataType="str"
-                      cachedLength="1"
-                      cachedName="Sex"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Sex]" />
+                      cachedLength="10"
+                      cachedName="buying"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Length]"
-                      cachedDataType="numeric"
-                      cachedName="Length"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Length]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Length]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[maint]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="maint"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Diameter]"
-                      cachedDataType="numeric"
-                      cachedName="Diameter"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diameter]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Diameter]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[doors]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="doors"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Height]"
-                      cachedDataType="numeric"
-                      cachedName="Height"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Height]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Height]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[persons]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="persons"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[WholeWeight]"
-                      cachedDataType="numeric"
-                      cachedName="WholeWeight"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WholeWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[WholeWeight]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lug_boot]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="lug_boot"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ShuckedWeight]"
-                      cachedDataType="numeric"
-                      cachedName="ShuckedWeight"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShuckedWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShuckedWeight]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[safety]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="safety"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[VisceraWeight]"
-                      cachedDataType="numeric"
-                      cachedName="VisceraWeight"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisceraWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[VisceraWeight]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ShellWeight]"
-                      cachedDataType="numeric"
-                      cachedName="ShellWeight"
-                      cachedPrecision="4"
-                      cachedScale="3"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShellWeight]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ShellWeight]" />
-                    <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rings]"
-                      cachedDataType="i4"
-                      cachedName="Rings"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rings]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rings]" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[class]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="class"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class]"
+                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sex]"
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class]"
                       codePage="1250"
                       dataType="str"
-                      length="1"
-                      name="Sex" />
+                      length="10"
+                      name="class" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Length]"
-                      dataType="numeric"
-                      name="Length"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="buying" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Diameter]"
-                      dataType="numeric"
-                      name="Diameter"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="maint" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Height]"
-                      dataType="numeric"
-                      name="Height"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="doors" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[WholeWeight]"
-                      dataType="numeric"
-                      name="WholeWeight"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="persons" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShuckedWeight]"
-                      dataType="numeric"
-                      name="ShuckedWeight"
-                      precision="4"
-                      scale="3" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="lug_boot" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VisceraWeight]"
-                      dataType="numeric"
-                      name="VisceraWeight"
-                      precision="4"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ShellWeight]"
-                      dataType="numeric"
-                      name="ShellWeight"
-                      precision="4"
-                      scale="3" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rings]"
-                      dataType="i4"
-                      name="Rings" />
+                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
+                      codePage="1250"
+                      dataType="str"
+                      length="10"
+                      name="safety" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -714,7 +614,7 @@
         <NodeLayout
           Size="155,42"
           Id="Package\Data Flow Task"
-          TopLeft="258,159" />
+          TopLeft="447,215" />
       </GraphLayout>
     </LayoutInfo>
   </Package>
@@ -726,37 +626,37 @@
         <NodeLayout
           Size="177,42"
           Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="561,346" />
+          TopLeft="604,401" />
         <NodeLayout
           Size="156,42"
           Id="Package\Data Flow Task\Flat File Source"
-          TopLeft="480,148" />
+          TopLeft="679,185" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="558,190">
+          TopLeft="757,227">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="91.5,156"
+              EndConnector="-64.5,174"
               Start="0,0"
-              End="91.5,148.5">
+              End="-64.5,166.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,74" />
+                    End="0,83" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,74"
-                    Point2="0,78"
-                    Point3="4,78" />
+                    Point1="0,83"
+                    Point2="0,87"
+                    Point3="-4,87" />
                   <mssgle:LineSegment
-                    End="87.5,78" />
+                    End="-60.5,87" />
                   <mssgle:CubicBezierSegment
-                    Point1="87.5,78"
-                    Point2="91.5,78"
-                    Point3="91.5,82" />
+                    Point1="-60.5,87"
+                    Point2="-64.5,87"
+                    Point3="-64.5,91" />
                   <mssgle:LineSegment
-                    End="91.5,148.5" />
+                    End="-64.5,166.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
