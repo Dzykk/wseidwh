@@ -1,0 +1,1910 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/2/2019 10:32:49 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-BOFB2DM"
+  DTS:CreatorName="DESKTOP-BOFB2DM\Dzykk"
+  DTS:DTSID="{D39572F0-5991-451A-9BAB-543258E5F91A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
+  DTS:LocaleID="1045"
+  DTS:ObjectName="Echocardiogram"
+  DTS:PackageType="5"
+  DTS:VersionBuild="30"
+  DTS:VersionGUID="{95CF94C1-D9E4-46F9-B5EB-B62100725A0A}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[EchocardCSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{8EF1504A-1E73-4EDC-B526-F3F651E25D42}"
+      DTS:ObjectName="EchocardCSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1045"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="G:\inb4 format\Pobrane\DWH\Z1\Echocardiogram\echocardiogram.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Survival"
+              DTS:DTSID="{3B63E46E-B74B-447B-B2E3-175D79B3DBEF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="StillAlive"
+              DTS:DTSID="{4E7352EB-874E-4A02-8E74-F502A44FA12E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AgeAtHeartAttack"
+              DTS:DTSID="{1B9B03F6-475C-48B8-B43D-FB19379217A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PericardialEffusion"
+              DTS:DTSID="{931115E1-D388-45B0-8A50-E075BB20589A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="FractionalShortening"
+              DTS:DTSID="{2F5C578C-E344-4A4C-A7C9-ACDD23611442}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EPSS"
+              DTS:DTSID="{97E074CB-4089-4563-B0D6-0706D10315C1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LVDD"
+              DTS:DTSID="{6020DCDA-501F-4A1A-84A6-D4BCA8F5B83A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WallMotionScore"
+              DTS:DTSID="{9325171A-815D-4C30-9CC5-4B2CE61D45FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="WallMotionIndex"
+              DTS:DTSID="{FE2D753B-0025-4DA0-9208-DA3834CAF814}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="MULT"
+              DTS:DTSID="{90AFB866-F2FC-424A-91D8-D3D892EDDBEE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="PatientName"
+              DTS:DTSID="{D0597C08-C9C0-4D52-9AD5-75F8AC1A684B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Group"
+              DTS:DTSID="{C12E2976-E3AC-4560-85C6-52BB16943366}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="AliveAtOneYear"
+              DTS:DTSID="{16469ADB-AA57-43C8-B6D3-09EE44C0E592}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Load data"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{2FBD3E34-4A39-4C04-B9E3-6C8E6F750E0D}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Load data"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Load data\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[Survival]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Survival"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[StillAlive]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StillAlive"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[AgeAtHeartAttack]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AgeAtHeartAttack"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[PericardialEffusion]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PericardialEffusion"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[FractionalShortening]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FractionalShortening"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[EPSS]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EPSS"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[LVDD]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LVDD"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[WallMotionScore]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WallMotionScore"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[WallMotionIndex]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WallMotionIndex"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[MULT]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MULT"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[PatientName]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PatientName"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[Group]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Group"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\Load data\Data Conversion.Inputs[Data Conversion Input].Columns[AliveAtOneYear]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AliveAtOneYear"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Load data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Survival]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Survival]"
+                      name="Survival"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[StillAlive]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[StillAlive]"
+                      name="StillAlive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AgeAtHeartAttack]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AgeAtHeartAttack]"
+                      name="AgeAtHeartAttack"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PericardialEffusion]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PericardialEffusion]"
+                      name="PericardialEffusion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[FractionalShortening]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[FractionalShortening]"
+                      name="FractionalShortening"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[EPSS]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[EPSS]"
+                      name="EPSS"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[LVDD]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[LVDD]"
+                      name="LVDD"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionScore]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionScore]"
+                      name="WallMotionScore"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionIndex]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionIndex]"
+                      name="WallMotionIndex"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[MULT]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[MULT]"
+                      name="MULT"
+                      precision="10"
+                      scale="5"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PatientName]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PatientName]"
+                      name="PatientName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Group]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AliveAtOneYear]"
+                      dataType="i2"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AliveAtOneYear]"
+                      name="AliveAtOneYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load data\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Load data\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load data\Echocardiogram flat file"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1045"
+              name="Echocardiogram flat file"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load data\Echocardiogram flat file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[EchocardCSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[EchocardCSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[Survival]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]"
+                      name="Survival"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[StillAlive]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]"
+                      name="StillAlive"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[AgeAtHeartAttack]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]"
+                      name="AgeAtHeartAttack"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[PericardialEffusion]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]"
+                      name="PericardialEffusion"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[FractionalShortening]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]"
+                      name="FractionalShortening"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[EPSS]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]"
+                      name="EPSS"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[LVDD]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]"
+                      name="LVDD"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[WallMotionScore]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]"
+                      name="WallMotionScore"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[WallMotionIndex]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]"
+                      name="WallMotionIndex"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[MULT]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]"
+                      name="MULT"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[PatientName]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]"
+                      name="PatientName"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[Group]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]"
+                      name="Group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[AliveAtOneYear]"
+                      length="50"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]"
+                      name="AliveAtOneYear"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[Survival]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Survival" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[StillAlive]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="StillAlive" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[AgeAtHeartAttack]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="AgeAtHeartAttack" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[PericardialEffusion]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="PericardialEffusion" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[FractionalShortening]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="FractionalShortening" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[EPSS]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="EPSS" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[LVDD]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="LVDD" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[WallMotionScore]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="WallMotionScore" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[WallMotionIndex]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="WallMotionIndex" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[MULT]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="MULT" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[PatientName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="PatientName" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[Group]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].ExternalColumns[AliveAtOneYear]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="AliveAtOneYear" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load data\Echocardiogram table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Echocardiogram table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[Echocardiogram]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Load data\Echocardiogram table.Connections[OleDbConnection]"
+                  connectionManagerID="{EA10642E-835D-4366-AE67-4F7D5996728B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Zadanie1DB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[Survival]"
+                      cachedDataType="numeric"
+                      cachedName="Survival"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[Survival]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Survival]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[StillAlive]"
+                      cachedDataType="i1"
+                      cachedName="StillAlive"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[StillAlive]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[StillAlive]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[AgeAtHeartAttack]"
+                      cachedDataType="numeric"
+                      cachedName="AgeAtHeartAttack"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[AgeAtHeartAttack]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AgeAtHeartAttack]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[PericardialEffusion]"
+                      cachedDataType="i4"
+                      cachedName="PericardialEffusion"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[PericardialEffusion]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PericardialEffusion]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[FractionalShortening]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FractionalShortening"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[FractionalShortening]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[FractionalShortening]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[EPSS]"
+                      cachedDataType="numeric"
+                      cachedName="EPSS"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[EPSS]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[EPSS]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[LVDD]"
+                      cachedDataType="numeric"
+                      cachedName="LVDD"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[LVDD]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[LVDD]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[WallMotionScore]"
+                      cachedDataType="numeric"
+                      cachedName="WallMotionScore"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[WallMotionScore]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionScore]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[WallMotionIndex]"
+                      cachedDataType="numeric"
+                      cachedName="WallMotionIndex"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[WallMotionIndex]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[WallMotionIndex]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[MULT]"
+                      cachedDataType="numeric"
+                      cachedName="MULT"
+                      cachedPrecision="10"
+                      cachedScale="5"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[MULT]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[MULT]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[PatientName]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PatientName"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[PatientName]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[PatientName]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[Group]"
+                      cachedDataType="i4"
+                      cachedName="Group"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[Group]" />
+                    <inputColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].Columns[AliveAtOneYear]"
+                      cachedDataType="i2"
+                      cachedName="AliveAtOneYear"
+                      externalMetadataColumnId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[AliveAtOneYear]"
+                      lineageId="Package\Load data\Data Conversion.Outputs[Data Conversion Output].Columns[AliveAtOneYear]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[Survival]"
+                      dataType="numeric"
+                      name="Survival"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[StillAlive]"
+                      dataType="i2"
+                      name="StillAlive" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[AgeAtHeartAttack]"
+                      dataType="numeric"
+                      name="AgeAtHeartAttack"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[PericardialEffusion]"
+                      dataType="i4"
+                      name="PericardialEffusion" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[FractionalShortening]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="FractionalShortening" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[EPSS]"
+                      dataType="numeric"
+                      name="EPSS"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[LVDD]"
+                      dataType="numeric"
+                      name="LVDD"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[WallMotionScore]"
+                      dataType="numeric"
+                      name="WallMotionScore"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[WallMotionIndex]"
+                      dataType="numeric"
+                      name="WallMotionIndex"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[MULT]"
+                      dataType="numeric"
+                      name="MULT"
+                      precision="10"
+                      scale="5" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[PatientName]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="PatientName" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[Group]"
+                      dataType="i4"
+                      name="Group" />
+                    <externalMetadataColumn
+                      refId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input].ExternalColumns[AliveAtOneYear]"
+                      dataType="i2"
+                      name="AliveAtOneYear" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load data\Echocardiogram table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Echocardiogram table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data\Echocardiogram table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Echocardiogram table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Load data\Nulls"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Nulls"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Load data\Nulls.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[Survival]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Survival"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Survival]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Survival == "?" || Survival == "" ? NULL(DT_WSTR,50) : REPLACE(Survival,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[StillAlive]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="StillAlive"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[StillAlive]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">StillAlive == "?" || StillAlive == "" ? NULL(DT_WSTR,50) : REPLACE(StillAlive,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[AgeAtHeartAttack]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AgeAtHeartAttack"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AgeAtHeartAttack]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">AgeAtHeartAttack == "?" || AgeAtHeartAttack == "" ? NULL(DT_WSTR,50) : REPLACE(AgeAtHeartAttack,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[PericardialEffusion]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PericardialEffusion"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PericardialEffusion]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">PericardialEffusion == "?" || PericardialEffusion == "" ? NULL(DT_WSTR,50) : REPLACE(PericardialEffusion,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[FractionalShortening]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="FractionalShortening"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[FractionalShortening]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">FractionalShortening == "?" || FractionalShortening == "" ? NULL(DT_WSTR,50) : REPLACE(FractionalShortening,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[EPSS]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="EPSS"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[EPSS]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">EPSS == "?" || EPSS == "" ? NULL(DT_WSTR,50) : REPLACE(EPSS,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[LVDD]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="LVDD"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[LVDD]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">LVDD == "?" || LVDD == "" ? NULL(DT_WSTR,50) : REPLACE(LVDD,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[WallMotionScore]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WallMotionScore"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionScore]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">WallMotionScore == "?" || WallMotionScore == "" ? NULL(DT_WSTR,50) : REPLACE(WallMotionScore,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[WallMotionIndex]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="WallMotionIndex"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[WallMotionIndex]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">WallMotionIndex == "?" || WallMotionIndex == "" ? NULL(DT_WSTR,50) : REPLACE(WallMotionIndex,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[MULT]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="MULT"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]} == "" ? NULL(DT_WSTR,50) : [REPLACE](#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[MULT]},".",",")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">MULT == "?" || MULT == "" ? NULL(DT_WSTR,50) : REPLACE(MULT,".",",")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[PatientName]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="PatientName"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]} == "" ? NULL(DT_WSTR,50) : #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[PatientName]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">PatientName == "?" || PatientName == "" ? NULL(DT_WSTR,50) : PatientName</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[Group]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Group"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]} == "" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]} == "name" ? NULL(DT_WSTR,50) : #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[Group]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">Group == "?" || Group == "" || Group == "name" ? NULL(DT_WSTR,50) : Group</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Load data\Nulls.Inputs[Derived Column Input].Columns[AliveAtOneYear]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="AliveAtOneYear"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">#{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]} == "?" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]} == "" || #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]} == "2,?" ? NULL(DT_WSTR,50) : #{Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output].Columns[AliveAtOneYear]}</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">AliveAtOneYear == "?" || AliveAtOneYear == "" || AliveAtOneYear == "2,?" ? NULL(DT_WSTR,50) : AliveAtOneYear</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Load data\Nulls.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Load data\Nulls.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Load data\Nulls.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Load data\Nulls.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Load data\Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Nulls.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Load data\Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Load data\Nulls.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Load data.Paths[Data Conversion Output]"
+              endId="Package\Load data\Echocardiogram table.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Load data\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Load data.Paths[Derived Column Output]"
+              endId="Package\Load data\Data Conversion.Inputs[Data Conversion Input]"
+              name="Derived Column Output"
+              startId="Package\Load data\Nulls.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Load data.Paths[Flat File Source Output]"
+              endId="Package\Load data\Nulls.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Load data\Echocardiogram flat file.Outputs[Flat File Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E5FB8490-7D14-469E-9441-6594F5F42FD7}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA10642E-835D-4366-AE67-4F7D5996728B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Echocardiogram" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{EBD94EAE-F0F0-4B21-AD7D-859A515C3763}"
+      DTS:From="Package\Truncate table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load data" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="147,42"
+          Id="Package\Truncate table"
+          TopLeft="785,185" />
+        <NodeLayout
+          Size="126,42"
+          Id="Package\Load data"
+          TopLeft="812,342" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="858.5,227">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="16.5,115"
+              Start="0,0"
+              End="16.5,107.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,53.5"
+                    Point2="0,57.5"
+                    Point3="4,57.5" />
+                  <mssgle:LineSegment
+                    End="12.5,57.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="12.5,57.5"
+                    Point2="16.5,57.5"
+                    Point3="16.5,61.5" />
+                  <mssgle:LineSegment
+                    End="16.5,107.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Load data">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="190,42"
+          Id="Package\Load data\Echocardiogram flat file"
+          TopLeft="774,308" />
+        <NodeLayout
+          Size="181,42"
+          Id="Package\Load data\Echocardiogram table"
+          TopLeft="833,635" />
+        <NodeLayout
+          Size="102,42"
+          Id="Package\Load data\Nulls"
+          TopLeft="616,446" />
+        <EdgeLayout
+          Id="Package\Load data.Paths[Flat File Source Output]"
+          TopLeft="869,350">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-202,96"
+              Start="0,0"
+              End="-202,88.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44"
+                    Point2="0,48"
+                    Point3="-4,48" />
+                  <mssgle:LineSegment
+                    End="-198,48" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-198,48"
+                    Point2="-202,48"
+                    Point3="-202,52" />
+                  <mssgle:LineSegment
+                    End="-202,88.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Load data\Data Conversion"
+          TopLeft="638,601" />
+        <EdgeLayout
+          Id="Package\Load data.Paths[Derived Column Output]"
+          TopLeft="667,488">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="49,113"
+              Start="0,0"
+              End="49,105.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,52.5"
+                    Point2="0,56.5"
+                    Point3="4,56.5" />
+                  <mssgle:LineSegment
+                    End="45,56.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45,56.5"
+                    Point2="49,56.5"
+                    Point3="49,60.5" />
+                  <mssgle:LineSegment
+                    End="49,105.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Load data.Paths[Data Conversion Output]"
+          TopLeft="794,622">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="39,34"
+              Start="0,0"
+              End="31.5,34">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="15.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="15.5,0"
+                    Point2="19.5,0"
+                    Point3="19.5,4" />
+                  <mssgle:LineSegment
+                    End="19.5,30" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,30"
+                    Point2="19.5,34"
+                    Point3="23.5,34" />
+                  <mssgle:LineSegment
+                    End="31.5,34" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load data\Echocardiogram table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

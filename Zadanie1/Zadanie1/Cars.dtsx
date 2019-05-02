@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
-  DTS:CreationDate="4/6/2019 12:15:01 PM"
+  DTS:CreationDate="5/2/2019 10:27:24 AM"
   DTS:CreationName="Microsoft.Package"
-  DTS:CreatorComputerName="PK2-10"
-  DTS:CreatorName="WSEI\jakub.juszczak"
-  DTS:DTSID="{3051E3F6-AEE7-405B-9BCB-73315E3984AC}"
+  DTS:CreatorComputerName="DESKTOP-BOFB2DM"
+  DTS:CreatorName="DESKTOP-BOFB2DM\Dzykk"
+  DTS:DTSID="{A9C934A5-FF9D-4DFE-83D7-DB1AAFE2A572}"
   DTS:ExecutableType="Microsoft.Package"
-  DTS:LastModifiedProductVersion="15.0.0900.40"
+  DTS:LastModifiedProductVersion="15.0.1100.123"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="Cars"
   DTS:PackageType="5"
-  DTS:VersionBuild="2"
-  DTS:VersionGUID="{713EFF55-A826-40F9-8E44-B4298F0CC08E}">
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{19AFE746-2E80-4567-A80C-99EEAD21B760}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:refId="Package.ConnectionManagers[CarsCSV]"
       DTS:CreationName="FLATFILE"
       DTS:DTSID="{278DEE86-34AB-4953-A674-603DB5490811}"
-      DTS:ObjectName="Flat File Connection Manager">
+      DTS:ObjectName="CarsCSV">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
@@ -29,7 +29,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1250"
-          DTS:ConnectionString="D:\car.csv">
+          DTS:ConnectionString="G:\inb4 format\Pobrane\DWH\Z1\Car\car.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -38,7 +38,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="buying"
-              DTS:DTSID="{ED9E0A02-E2C2-40C3-810D-30B98F6EFAB9}"
+              DTS:DTSID="{886855CF-E32C-48EA-BB4C-AA51E9EBB5F1}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +47,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="maint"
-              DTS:DTSID="{49FE1BE3-34A2-4870-827B-C2FEC41B8B6A}"
+              DTS:DTSID="{9495868D-EB63-4772-AFB5-8B900BE77F1C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +56,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="doors"
-              DTS:DTSID="{D42352D8-081F-40B5-A54E-84F573B7CE5D}"
+              DTS:DTSID="{DCFF361E-241F-4D90-8BA7-150AB250BA03}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,7 +65,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="persons"
-              DTS:DTSID="{4E8CD8BC-75CD-4212-8A06-AAA92D3BAF35}"
+              DTS:DTSID="{62332CDC-43C9-4B14-8DA7-08B5B1832B53}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -74,7 +74,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="lug_boot"
-              DTS:DTSID="{F1B3FE11-5198-439E-B475-65406A56A6EC}"
+              DTS:DTSID="{76CA8783-4838-4E70-8133-FFA1E03E16B4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -83,7 +83,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="safety"
-              DTS:DTSID="{E23FC3EE-5B24-4C25-A439-165BC8736E5F}"
+              DTS:DTSID="{3F0B8057-AB94-47AA-BB2F-F13C96390944}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -92,33 +92,23 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="class"
-              DTS:DTSID="{3A4CD765-BF10-447A-A41F-7514159A42B2}"
+              DTS:DTSID="{6E6CC9AC-B0C4-4719-B61A-C0202D036137}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[LocalHost.Auto]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{0F31CD93-0BBA-420F-B5C5-59BA57EB0FA3}"
-      DTS:ObjectName="LocalHost.Auto">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectionString="Data Source=.;Initial Catalog=Auto;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
   <DTS:Variables />
   <DTS:Executables>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\Load Data"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{146DE056-82DA-4D96-AE9A-6D8AE3483C65}"
+      DTS:DTSID="{a4565dfa-b085-4167-b78d-3ef5724dc974}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="Load Data"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -126,12 +116,12 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Flat File Source"
+              refId="Package\Load Data\Cars Flat File"
               componentClassID="Microsoft.FlatFileSource"
               contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Flat File Source"
               localeId="1033"
-              name="Flat File Source"
+              name="Cars Flat File"
               usesDispositions="true"
               version="1">
               <properties>
@@ -146,25 +136,25 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
-                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  refId="Package\Load Data\Cars Flat File.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[CarsCSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[CarsCSV]"
                   name="FlatFileConnection" />
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                  refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output]"
                   name="Flat File Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[buying]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[buying]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[buying]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[buying]"
                       name="buying"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -179,14 +169,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[maint]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[maint]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[maint]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[maint]"
                       name="maint"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -201,14 +191,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[doors]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[doors]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[doors]"
                       length="15"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[doors]"
                       name="doors"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -223,14 +213,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[persons]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[persons]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[persons]"
                       length="15"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[persons]"
                       name="persons"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -245,14 +235,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[lug_boot]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[lug_boot]"
                       name="lug_boot"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -267,14 +257,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[safety]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[safety]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[safety]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[safety]"
                       name="safety"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -289,14 +279,14 @@
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[class]"
                       codePage="1250"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[class]"
+                      externalMetadataColumnId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[class]"
                       length="10"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[class]"
                       name="class"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -314,43 +304,43 @@
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[buying]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[buying]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="buying" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[maint]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[maint]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="maint" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[doors]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[doors]"
                       codePage="1250"
                       dataType="str"
                       length="15"
                       name="doors" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[persons]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[persons]"
                       codePage="1250"
                       dataType="str"
                       length="15"
                       name="persons" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[lug_boot]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="lug_boot" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[safety]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[safety]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="safety" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[class]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].ExternalColumns[class]"
                       codePage="1250"
                       dataType="str"
                       length="10"
@@ -358,27 +348,27 @@
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                  refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output]"
                   isErrorOut="true"
                   name="Flat File Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       codePage="1250"
                       dataType="text"
                       description="Flat File Source Error Output Column"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
                       name="Flat File Source Error Output Column" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -387,11 +377,11 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\Load Data\Cars Table"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="OLE DB Destination"
+              name="Cars Table"
               usesDispositions="true"
               version="4">
               <properties>
@@ -402,7 +392,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[TestTable]</property>
+                  name="OpenRowset">[dbo].[Cars]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -444,117 +434,117 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[LocalHost.Auto]"
-                  connectionManagerRefId="Package.ConnectionManagers[LocalHost.Auto]"
+                  refId="Package\Load Data\Cars Table.Connections[OleDbConnection]"
+                  connectionManagerID="{EA10642E-835D-4366-AE67-4F7D5996728B}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Zadanie1DB]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[buying]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[buying]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="buying"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[buying]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[buying]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[maint]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[maint]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="maint"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[maint]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[maint]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[doors]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[doors]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="doors"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[doors]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[doors]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[persons]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[persons]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="15"
                       cachedName="persons"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[persons]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[persons]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[lug_boot]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[lug_boot]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="lug_boot"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[lug_boot]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[lug_boot]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[safety]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[safety]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="safety"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[safety]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[safety]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[class]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].Columns[class]"
                       cachedCodepage="1250"
                       cachedDataType="str"
                       cachedLength="10"
                       cachedName="class"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class]"
-                      lineageId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[class]" />
+                      externalMetadataColumnId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[class]"
+                      lineageId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output].Columns[class]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[class]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[class]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="class" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[buying]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="buying" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[maint]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="maint" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[doors]"
                       codePage="1250"
                       dataType="str"
-                      length="10"
+                      length="15"
                       name="doors" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[persons]"
                       codePage="1250"
                       dataType="str"
-                      length="10"
+                      length="15"
                       name="persons" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[lug_boot]"
                       codePage="1250"
                       dataType="str"
                       length="10"
                       name="lug_boot" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
+                      refId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input].ExternalColumns[safety]"
                       codePage="1250"
                       dataType="str"
                       length="10"
@@ -564,22 +554,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Load Data\Cars Table.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Load Data\Cars Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Load Data\Cars Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Load Data\Cars Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Load Data\Cars Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -590,15 +580,41 @@
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Flat File Source Output]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\Load Data.Paths[Flat File Source Output]"
+              endId="Package\Load Data\Cars Table.Inputs[OLE DB Destination Input]"
               name="Flat File Source Output"
-              startId="Package\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              startId="Package\Load Data\Cars Flat File.Outputs[Flat File Source Output]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate Table"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{686f36cd-6d4a-4013-b901-4cfc8f402968}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate Table"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{EA10642E-835D-4366-AE67-4F7D5996728B}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE dbo.Cars" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{9fbc3830-a87d-461a-9b7f-219faf6c98c9}"
+      DTS:From="Package\Truncate Table"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Load Data" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -610,36 +626,74 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="155,42"
-          Id="Package\Data Flow Task"
-          TopLeft="447,215" />
+          Size="127,42"
+          Id="Package\Load Data"
+          TopLeft="849,399" />
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Truncate Table"
+          TopLeft="825,274" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="900,316">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="12.5,83"
+              Start="0,0"
+              End="12.5,75.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,37.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,37.5"
+                    Point2="0,41.5"
+                    Point3="4,41.5" />
+                  <mssgle:LineSegment
+                    End="8.5,41.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="8.5,41.5"
+                    Point2="12.5,41.5"
+                    Point3="12.5,45.5" />
+                  <mssgle:LineSegment
+                    End="12.5,75.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\Load Data">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="177,42"
-          Id="Package\Data Flow Task\OLE DB Destination"
-          TopLeft="604,401" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Data Flow Task\Flat File Source"
+          Size="139,42"
+          Id="Package\Load Data\Cars Flat File"
           TopLeft="679,185" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Load Data\Cars Table"
+          TopLeft="604,401" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Flat File Source Output]"
-          TopLeft="757,227">
+          Id="Package\Load Data.Paths[Flat File Source Output]"
+          TopLeft="748.5,227">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-64.5,174"
+              EndConnector="-80,174"
               Start="0,0"
-              End="-64.5,166.5">
+              End="-80,166.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -650,13 +704,13 @@
                     Point2="0,87"
                     Point3="-4,87" />
                   <mssgle:LineSegment
-                    End="-60.5,87" />
+                    End="-76,87" />
                   <mssgle:CubicBezierSegment
-                    Point1="-60.5,87"
-                    Point2="-64.5,87"
-                    Point3="-64.5,91" />
+                    Point1="-76,87"
+                    Point2="-80,87"
+                    Point3="-80,91" />
                   <mssgle:LineSegment
-                    End="-64.5,166.5" />
+                    End="-80,166.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -669,7 +723,7 @@
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\Load Data\Cars Table">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
