@@ -5,14 +5,14 @@
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-BOFB2DM"
   DTS:CreatorName="DESKTOP-BOFB2DM\Dzykk"
-  DTS:DTSID="{DE6FF99E-E92C-4D94-AE75-8E9FB557067C}"
+  DTS:DTSID="{6F577A32-F19D-4886-A157-3CEDFB7AC513}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1100.123"
   DTS:LocaleID="1045"
-  DTS:ObjectName="Package"
+  DTS:ObjectName="Temp Tables"
   DTS:PackageType="5"
-  DTS:VersionBuild="47"
-  DTS:VersionGUID="{F44C560E-ADAC-4886-9452-CE5A6DCBA49F}">
+  DTS:VersionBuild="48"
+  DTS:VersionGUID="{5E4A3CD5-8988-492E-ABF4-64A200E9E742}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4710,7 +4710,7 @@ where [refTable].[StoreId] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output2]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Union All.Inputs[Union All Input 1]"
               name="Derived Column Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD2 Update.Outputs[Derived Column Output]" />
@@ -4720,7 +4720,7 @@ where [refTable].[StoreId] = ?</property>
               name="Derived Column Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD2 Columns.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output2]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Employee by EmpID.Inputs[Sort Input]"
               name="Derived Column Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Full Name.Outputs[Derived Column Output]" />
@@ -4756,14 +4756,14 @@ where [refTable].[StoreId] = ?</property>
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Lookup.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output1]"
-              endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD2 Columns.Inputs[Derived Column Input]"
-              name="Merge Join Output"
-              startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Employee.Outputs[Merge Join Output]" />
-            <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store by EmpID.Inputs[Sort Input]"
               name="Merge Join Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Geography.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output]"
+              endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD2 Columns.Inputs[Derived Column Input]"
+              name="Merge Join Output"
+              startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Employee.Outputs[Merge Join Output]" />
             <path
               refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[SCD1]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD1 Update.Inputs[Derived Column Input]"
@@ -4775,27 +4775,27 @@ where [refTable].[StoreId] = ?</property>
               name="SCD2"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD Split.Outputs[SCD2]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output2]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Employee.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store by EmpID.Outputs[Sort Output]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output4]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output1]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Lookup.Inputs[Lookup Input]"
               name="Sort Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store by StoreID.Outputs[Sort Output]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output1]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output2]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Geography.Inputs[Merge Join Left Input]"
               name="Sort Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store by GeoID.Outputs[Sort Output]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output3]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Geography.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Geography by GeoID.Outputs[Sort Output]" />
             <path
-              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output3]"
+              refId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output4]"
               endId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Employee.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Employee by EmpID.Outputs[Sort Output]" />
@@ -5585,13 +5585,25 @@ FROM
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="329,42"
+          Id="Package\Create Temporal Staging Table For Changed Records"
+          TopLeft="431,94" />
+        <NodeLayout
           Size="438,42"
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table"
           TopLeft="370,206" />
         <NodeLayout
-          Size="329,42"
-          Id="Package\Create Temporal Staging Table For Changed Records"
-          TopLeft="431,94" />
+          Size="261,42"
+          Id="Package\Load SCD2 Updated Rows to DimStore"
+          TopLeft="451,491" />
+        <NodeLayout
+          Size="270,42"
+          Id="Package\Update SCD1 Attributes in Existing Rows"
+          TopLeft="458,299" />
+        <NodeLayout
+          Size="311,42"
+          Id="Package\Update ValidTo Attribute for SCD2 Updated Rows"
+          TopLeft="431,389" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="592.25,136">
@@ -5614,10 +5626,6 @@ FROM
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="270,42"
-          Id="Package\Update SCD1 Attributes in Existing Rows"
-          TopLeft="458,299" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="591,248">
@@ -5640,10 +5648,6 @@ FROM
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="311,42"
-          Id="Package\Update ValidTo Attribute for SCD2 Updated Rows"
-          TopLeft="431,389" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 2]"
           TopLeft="589.75,341">
@@ -5666,10 +5670,6 @@ FROM
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="261,42"
-          Id="Package\Load SCD2 Updated Rows to DimStore"
-          TopLeft="451,491" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 3]"
           TopLeft="584,431">
@@ -5795,7 +5795,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Geography"
           TopLeft="348,211" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output3]"
           TopLeft="570,230.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5817,7 +5817,7 @@ FROM
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output1]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output2]"
           TopLeft="438.5,154">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5843,7 +5843,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store by EmpID"
           TopLeft="387,295" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output1]"
           TopLeft="440.5,253">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5881,7 +5881,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Store JOIN Employee"
           TopLeft="405,371" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output2]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output]"
           TopLeft="464,337">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5919,7 +5919,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Employee by EmpID"
           TopLeft="167,365" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output2]"
           TopLeft="253.75,337">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5941,7 +5941,7 @@ FROM
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output3]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output4]"
           TopLeft="342,389">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -5967,7 +5967,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\SCD2 Columns"
           TopLeft="427,458" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output1]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Merge Join Output]"
           TopLeft="497.75,413">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6023,7 +6023,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Lookup"
           TopLeft="444,645" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output4]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Sort Output1]"
           TopLeft="504,584">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6193,7 +6193,7 @@ FROM
           Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Union All"
           TopLeft="886,678" />
         <EdgeLayout
-          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output2]"
+          Id="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table.Paths[Derived Column Output]"
           TopLeft="949,613">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -6278,6 +6278,29 @@ FROM
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
+    design-time-name="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Lookup">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string"></Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
     design-time-name="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\DimStore">
     <Properties>
       <Property>
@@ -6291,23 +6314,8 @@ FROM
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\Lookup">
+    design-time-name="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\##DimStore">
     <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:boolean">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string"></Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:int">0</Value>
-      </Property>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>
@@ -6380,22 +6388,6 @@ FROM
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Load New Data to DimStore Table And Changed Rows to ##DimStore Table\##DimStore">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Load SCD2 Updated Rows to DimStore\##DimStore">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Load SCD2 Updated Rows to DimStore\DimStore">
     <Properties>
       <Property>
@@ -6405,6 +6397,14 @@ FROM
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Load SCD2 Updated Rows to DimStore\##DimStore">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
