@@ -11,8 +11,8 @@
   DTS:LocaleID="1045"
   DTS:ObjectName="Proper"
   DTS:PackageType="5"
-  DTS:VersionBuild="50"
-  DTS:VersionGUID="{C17FECBA-ED4A-4D30-9FC9-44B1541A338E}">
+  DTS:VersionBuild="55"
+  DTS:VersionGUID="{4150981A-285A-4C53-81ED-83AA6F82BB22}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -3929,13 +3929,13 @@ where [refTable].[StoreID] = ?</property>
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Expression"
-                          name="Expression">(DT_DATE)"1753-01-01 00:00:00.000"</property>
+                          name="Expression">(DT_DATE)"1900-01-01 00:00:00.000"</property>
                         <property
                           containsID="true"
                           dataType="System.String"
                           description="Derived Column Friendly Expression"
                           expressionType="Notify"
-                          name="FriendlyExpression">(DT_DATE)"1753-01-01 00:00:00.000"</property>
+                          name="FriendlyExpression">(DT_DATE)"1900-01-01 00:00:00.000"</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -7125,7 +7125,7 @@ ID = ?</property>
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
           SQLTask:Connection="{085402A7-0113-43AD-9D84-44F3C744F415}"
-          SQLTask:SqlStatementSource="INSERT INTO&#xA;dbo.PackageLogs&#xA;(PackageName, PackageExecutionTime, RowsInserted, RowsDeleted, RowsUpdated, RowsNoAction, RowsAll)&#xA;VALUES&#xA;(?, ?, ?, ?, ?, ?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          SQLTask:SqlStatementSource="INSERT INTO&#xA;dbo.PackageLogs&#xA;(PackageName, PackageExecutionTime, RowsInserted, RowsDeleted, RowsUpdated, RowsNoAction, RowsAll)&#xA;VALUES&#xA;(?, ?, ?, ?, ?, ?, ?)" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
           <SQLTask:ParameterBinding
             SQLTask:ParameterName="0"
             SQLTask:DtsVariableName="System::PackageName"
